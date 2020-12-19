@@ -20,6 +20,9 @@ const run = () => {
     const port = process.env.PORT
     app.use(morgan("dev"));
 
+    // @route GET api/cryptocurrencies
+    // @desc The route to get cryptos from coinmarket cap
+    // @access Public
     app.get('/api/cryptocurrencies', async (req, res) => {
         try {
             req.time = Date.now()
